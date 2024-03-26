@@ -16,11 +16,11 @@ function App() {
 
   const apiTesting = () => {
     fetchDataFromApi("/movie/popular")
-      .then(function (response) {
+      .then( response => {
         console.log(response.results);
         dispatch(getApiConfiguration(response));
       })
-      .catch(function (error) {
+      .catch((error)=> {
         console.error(error);
       });
   };
